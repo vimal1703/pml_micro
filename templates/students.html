@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset = 'UTF-8'>  
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+   <title> STUDENTS PERFORMANCE ANALYSIS  </title>
+</head>
+    
+    
+<body>
+    <div class="login">
+    
+    <h1> STUDENTS PERFORMANCE ANALYSIS </h1>
+    <form action="{{ url_for('students')}}"method="post" class="scroll">
+    <h4>Enter your Gender</h4>
+    
+    <input type = "text" name = 'Gender' placeholder="0-female/1-male" required="required"/>   <br>
+    
+     <h4>Enter your level_of_education</h4>
+    <input type = "text" name = 'level_of_education'placeholder="0-bachelor's degree/1-master's degree" required="required"/> <br>
+        
+    <h4>Enter your lunch</h4>
+    
+    <input type = "text" name = 'lunch' placeholder="0-standard/1-free/reduced" required="required"/>   <br>
+        
+     <h4>Enter your math_score</h4>
+    
+    <input type = "text" name = 'math_score' placeholder="math_score" required="required"/>   <br>
+        
+      <h4>Enter your reading_score</h4>
+    
+    <input type = "text" name = 'reading_score' placeholder="reading_score" required="required"/>   <br>
+
+
+     <h4>Enter your writing_score</h4>
+    
+    <input type = "text" name = 'writing_score' placeholder="writing_score" required="required"/>   <br>
+        
+        
+     <h4>Enter your average</h4>
+    
+    <input type = "text" name = 'average' placeholder="average" required="required"/>   <br>
+
+    
+     <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    
+    
+     <br>
+   {{ prediction_text }}
+
+ </div>
+ 
+</body>
+
+
+
+
+
+
+</html>
